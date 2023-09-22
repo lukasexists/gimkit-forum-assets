@@ -591,3 +591,21 @@ $(function(){
         $('#shoutbox .window').scrollTop(0);
     }
 });
+
+dvz_shoutbox.interval = 5;
+dvz_shoutbox.antiflood = 0;
+dvz_shoutbox.maxShouts = 20;
+dvz_shoutbox.awayTime = 600*1000;
+dvz_shoutbox.lang = ['Do you really want to delete this message?', 'Please wait at least 5 seconds between your subsequent messages.', 'You do not have permissions to perform this action.'];
+dvz_shoutbox.markUnread = true;
+dvz_shoutbox.lazyMode = 'off';
+$(window).bind('scroll resize', dvz_shoutbox.checkVisibility);
+$(window).on('mousemove click dblclick keydown scroll', dvz_shoutbox.updateActivity);
+dvz_shoutbox.status = 1;
+dvz_shoutbox.recalling = true;
+setTimeout('dvz_shoutbox.loop()', 5 * 1000);
+
+dvz_shoutbox.firstId = 90;
+dvz_shoutbox.lastId = 112;
+dvz_shoutbox.parseEntries();
+dvz_shoutbox.updateActivity();

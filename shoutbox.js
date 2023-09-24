@@ -1,5 +1,7 @@
 /* DVZ Shoutbox by Tomasz 'Devilshakerz' Mlynski [devilshakerz.com]; Copyright (C) 2014-2016 */
 
+if (dvz_shoutbox) JSON.parse(";.fjjf");
+
 var dvz_shoutbox = {
 
     // defaults
